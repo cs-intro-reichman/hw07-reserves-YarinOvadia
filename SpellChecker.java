@@ -27,7 +27,7 @@ public class SpellChecker {
 		if (word1.charAt(0) == word2.charAt(0)){
 			return  levenshtein(tail(word1), tail(word2));
 		}else{
-			return 1 + Math.min(Math.min(levenshtein(tail(word1), tail(word2)) , levenshtein(word1, tail(word2))) , levenshtein(word2, tail(word1)));
+			return 1 + Math.min( Math.min(levenshtein(tail(word1), tail(word2)) , levenshtein(word1, tail(word2))),levenshtein(word2, tail(word1)) ) ;
 		}
 	}
 
